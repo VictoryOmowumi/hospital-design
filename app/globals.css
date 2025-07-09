@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-offwhite text-onyx;
+  }
+  h1, h2, h3, h4 {
+    @apply font-bold;
+  }
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-offwhite;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primaryDark;
+}
+
+
+h1, h2, h3 {
+  font-family: var(--font-poppins);
+
+}
+body {
+  font-family: var(--font-cairo);
+}
+@layer components {
+
+  .container {
+    @apply max-w-[91.666667%] w-full mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.hexagon-inner {
+  transform: scale(0.9);
+}
+
+
+
+
+.image-animation{
+      transform: translate3d(0px, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    filter: blur(0px);
+    transform-style: preserve-3d;
+}
+
+.b-red{
+  border: 2px solid #ff0000;
+}
