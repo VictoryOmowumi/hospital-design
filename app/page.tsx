@@ -17,7 +17,7 @@ export default function Home() {
       <DoctorsPreview />
       <NewsSection />
       <EmergencyCTA />
-      <ContactBar />
+      {/* <ContactBar /> */}
     </main>
   );
 }

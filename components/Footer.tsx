@@ -21,8 +21,15 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-onyx text-offwhite pt-16 pb-8">
-      <div className="container mx-auto px-4 md:px-16">
+    <footer className="bg-onyx text-offwhite pt-16 pb-8 relative overflow-hidden">
+      {/* Overlay Text */}
+      <div className="absolute inset-0 flex justify-center p-5  pointer-events-none">
+        <h2 className="text-[7rem] md:text-[10rem] lg:text-[25rem] font-bold text-white/5 select-none whitespace-nowrap">
+          Nakowa
+        </h2>
+      </div>
+      
+      <div className="container mx-auto px-4 md:px-16 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Column */}
           <div>

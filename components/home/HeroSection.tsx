@@ -40,7 +40,7 @@ export default function HeroSection() {
 
         {/* Background image */}
         <Image
-          src="/assets/nhc-3.png"
+          src="/assets/nhc-11.png"
           alt="Hero Background"
           fill
           priority
@@ -61,7 +61,7 @@ export default function HeroSection() {
           className="text-white mx-auto"
         >
           <motion.h1 
-            className="text-4xl md:text-[7rem] leading-[1] md:max-w-7xl mx-auto font-light tracking-tight mb-4"
+            className="text-4xl md:text-[4rem] lg:text-[7rem] leading-[1] lg:max-w-7xl mx-auto font-light tracking-tight mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ 

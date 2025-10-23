@@ -119,7 +119,7 @@ export default function Header() {
       }
     }
   }}
-  className={`sticky top-2 z-50 transition-all duration-300 rounded-xl md:rounded-full w-full md:w-11/12 mx-auto md:my-4 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-white/90 backdrop-blur-sm py-2'}`}
+  className={`sticky top-2 z-50 transition-all duration-300 rounded-xl lg:rounded-full w-full lg:w-11/12 mx-auto lg:my-4 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-white/90 backdrop-blur-sm py-2'}`}
 >
       <div className=" px-4 md:px-6">
         <div className="flex justify-between items-center">
@@ -135,14 +135,14 @@ export default function Header() {
                 alt="Nakowa Health Care Logo"
                 width={100}
                 height={100}
-                className="h-auto w-32 md:w-48 rounded-full object-contain md:object-cover"
+                className="h-auto w-32 lg:w-48 rounded-full object-contain lg:object-cover"
                 priority
               />
             </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-2">
+          <nav className="hidden lg:flex items-center space-x-2">
             {navItems.map((item, i) => (
               <motion.div
                 key={item.title}
@@ -175,7 +175,7 @@ export default function Header() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.8 }}
-            className="hidden md:block"
+            className="hidden lg:block"
           >
             <Link
               href="/book"
@@ -187,7 +187,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <motion.div 
-            className="md:hidden flex items-center"
+            className="lg:hidden flex items-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
@@ -216,7 +216,7 @@ export default function Header() {
               animate="open"
               exit="closed"
               variants={mobileMenuVariants}
-              className="md:hidden bg-white shadow-lg rounded-lg overflow-hidden"
+              className="lg:hidden bg-white shadow-lg rounded-lg overflow-hidden"
             >
               <div className="px-4 space-y-2 py-4">
                 {navItems.map((item, i) => (

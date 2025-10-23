@@ -156,7 +156,7 @@ export function TestimonialsSection() {
                   return (
                     <div 
                       key={idx}
-                      className="w-full md:w-1/3 px-4 h-full flex-shrink-0"
+                      className="w-full lg:w-1/3 px-4 h-full flex-shrink-0"
                     >
                       <motion.div
                         className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col"

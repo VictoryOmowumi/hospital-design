@@ -72,53 +72,55 @@ export function NewsSection() {
           </Link>
         </motion.div>
 
-        {/* News Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {news.map((item, index) => (
-            <motion.article
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
-            >
-              <div className="h-48 bg-gradient-to-r from-primary/10 to-primary/5 flex items-center justify-center">
-                <div className="text-5xl text-primary/30">📰</div>
-              </div>
-              
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <span className="text-xs font-medium text-primary px-3 py-1 bg-primary/10 rounded-full">
-                    {item.category}
-                  </span>
-                  <span className="text-xs text-onyx/60">
-                    {item.readTime}
-                  </span>
+        {/* Horizontal Scroll on Mobile, Grid on Desktop */}
+        <div className="overflow-x-auto md:overflow-x-visible -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 min-w-max md:min-w-0">
+            {news.map((item, index) => (
+              <motion.article
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden w-[300px] md:w-auto flex-shrink-0 md:flex-shrink"
+              >
+                <div className="h-48 bg-gradient-to-r from-primary/10 to-primary/5 flex items-center justify-center">
+                  <div className="text-5xl text-primary/30">📰</div>
                 </div>
                 
-                <time className="block text-sm text-onyx/60 mb-2">
-                  {item.date}
-                </time>
-                
-                <h3 className="text-xl font-bold text-sacramento mb-3 group-hover:text-primary transition-colors">
-                  {item.title}
-                </h3>
-                
-                <p className="text-onyx/80 mb-5 line-clamp-2">
-                  {item.excerpt}
-                </p>
-                
-                <Link 
-                  href={`/news/${item.id}`}
-                  className="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors group/link"
-                >
-                  Read more
-                  <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
-                </Link>
-              </div>
-            </motion.article>
-          ))}
+                <div className="p-6">
+                  <div className="flex justify-between items-center mb-3">
+                    <span className="text-xs font-medium text-primary px-3 py-1 bg-primary/10 rounded-full">
+                      {item.category}
+                    </span>
+                    <span className="text-xs text-onyx/60">
+                      {item.readTime}
+                    </span>
+                  </div>
+                  
+                  <time className="block text-sm text-onyx/60 mb-2">
+                    {item.date}
+                  </time>
+                  
+                  <h3 className="text-xl font-bold text-sacramento mb-3 group-hover:text-primary transition-colors">
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-onyx/80 mb-5 line-clamp-2">
+                    {item.excerpt}
+                  </p>
+                  
+                  <Link 
+                    href={`/news/${item.id}`}
+                    className="inline-flex items-center text-primary font-medium hover:text-primary-dark transition-colors group/link"
+                  >
+                    Read more
+                    <ArrowRightIcon className="ml-2 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                  </Link>
+                </div>
+              </motion.article>
+            ))}
+          </div>
         </div>
 
         {/* Mobile View All Link */}

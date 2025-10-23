@@ -10,7 +10,7 @@ export default function ServicesSection() {
       icon: <Stethoscope className="w-6 h-6" strokeWidth={1} />,
       title: "Primary Care",
       description:
-        "Comprehensive health services for all ages with personalized treatment plans.",
+        "Comprehensive health care with personalized treatment plans.",
       bgColor: "bg-primary",
     },
     {
@@ -158,40 +158,45 @@ export default function ServicesSection() {
           </div>
 
           {/* Right Column - Services Cards */}
-          <div className="lg:w-1/2 space-y-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial="hidden"
-                whileInView="visible"
-                whileHover="hover"
-                viewport={{ once: true, margin: "-50px" }}
-                variants={cardVariants}
-                transition={{ delay: index * 0.15 }}
-                className="w-full h-64 bg-offwhite rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100"
-              >
-                <div className="flex flex-col justify-between h-full p-8">
-                  <div
-                    className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center`}
+          <div className="lg:w-1/2">
+            {/* Horizontal Scroll on Mobile, Vertical Stack on Desktop */}
+            <div className="overflow-x-auto lg:overflow-x-visible -mx-4 px-4 lg:mx-0 lg:px-0 no-scrollbar">
+              <div className="flex lg:flex-col gap-6 min-w-max lg:min-w-0">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={index}
+                    initial="hidden"
+                    whileInView="visible"
+                    whileHover="hover"
+                    viewport={{ once: true, margin: "-50px" }}
+                    variants={cardVariants}
+                    transition={{ delay: index * 0.15 }}
+                    className="w-[320px] lg:w-full h-64 bg-offwhite rounded-2xl shadow-sm hover:shadow-md transition-all border border-gray-100 flex-shrink-0 lg:flex-shrink"
                   >
-                    <div className="text-white">{service.icon}</div>
-                  </div>
+                    <div className="flex flex-col justify-between h-full p-8">
+                      <div
+                        className={`w-16 h-16 rounded-full ${service.bgColor} flex items-center justify-center`}
+                      >
+                        <div className="text-white">{service.icon}</div>
+                      </div>
 
-                  <div>
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 mb-6">{service.description}</p>
-                    <Link
-                      href={`/services/${service.title.toLowerCase()}`}
-                      className="text-primary font-medium flex items-center"
-                    >
-                      Learn more <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                      <div>
+                        <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-600 mb-6">{service.description}</p>
+                        <Link
+                          href={`/services/${service.title.toLowerCase()}`}
+                          className="text-primary font-medium flex items-center"
+                        >
+                          Learn more <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
