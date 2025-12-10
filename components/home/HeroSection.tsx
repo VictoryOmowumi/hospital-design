@@ -101,7 +101,7 @@ export default function HeroSection() {
               Explore Services
             </Link>
             <Link
-              href="/appointment"
+              href="/book"
               className="bg-offwhite text-primary px-4 md:px-8 py-3 md:py-4 text-sm rounded-full  hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105"
             >
               Book Appointment

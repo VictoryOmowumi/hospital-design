@@ -150,7 +150,7 @@ export function EmergencyCTA() {
               whileTap={{ scale: 0.95 }}
             >
               <Link 
-                href="tel:+2341234567890" 
+                href="tel:+2347030189611" 
                 className="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-medium py-4 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 <Phone className="w-5 h-5" />
@@ -178,9 +178,11 @@ export function EmergencyCTA() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="mt-8 text-white/70 text-sm"
+            className="mt-8 text-white/70 text-sm flex justify-center gap-2"
           >
-            Emergency Hotline: <a href="tel:+2341234567890" className="text-primary hover:text-primary-light font-semibold">+234 123 456 7890</a>
+            Emergency Hotline: <a href="tel:+2348033605558" className="text-primary hover:text-primary-light font-semibold">0803 360 5558</a>
+            or
+            <a href="tel:+2347030189611" className="text-primary hover:text-primary-light font-semibold">0703 018 9611</a>
           </motion.div>
         </motion.div>
       </div>

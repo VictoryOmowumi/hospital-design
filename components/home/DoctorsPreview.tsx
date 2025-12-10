@@ -5,23 +5,23 @@ import { motion } from 'framer-motion';
 
 const doctors = [
   {
-    name: "Dr. Chike Obi",
-    specialty: "Pediatrician",
+    name: "Dr. Aliyu M.A",
+    specialty: "CHIEF MEDICAL DIRECTOR AND FOUNDER",
     image: "/assets/nhc-10.png",
   },
   {
-    name: "Dr. Amina Yusuf",
-    specialty: "Cardiologist",
+    name: "Dr. Salawudeen Z",
+    specialty: "CHIEF MEDICAL OFFICER",
     image: "/assets/nhc-9.png",
   },
   {
-    name: "Nurse. Beatrice Adamu",
-    specialty: "Obstetrician",
+    name: "Mrs. Aliyu S.A",
+    specialty: "CHIEF NURSING OFFICER & MANAGING DIRECTOR",
     image: "/assets/nhc-12.png",
   },
   {
     name: "Pharm. Maryam Usman",
-    specialty: "Pharmacist",
+    specialty: "PHARMACIST",
     image: "/assets/nhc-15.png",
   },
 ];

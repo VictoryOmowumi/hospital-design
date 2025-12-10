@@ -96,13 +96,12 @@ export default function Footer() {
             <h4 className="text-lg font-bold mb-6 text-white">Contact Us</h4>
             <address className="not-italic">
               <p className="text-offwhite/80 mb-4">
-                123 Medical Drive<br />
-                Lagos, Nigeria
+              No 12, Kafancha road, off Kulende Estate Phase II, Kulende, Sango, Ilorin, Kwara state
               </p>
               <p className="mb-4">
                 <span className="text-offwhite/80">Phone:</span>{' '}
-                <a href="tel:+2341234567890" className="text-primary hover:text-primary-light">
-                  +234 123 456 7890
+                <a href="tel:+2347030189611" className="text-primary hover:text-primary-light">
+                0703 018 9611
                 </a>
               </p>
               <p className="mb-4">
@@ -113,7 +112,7 @@ export default function Footer() {
               </p>
               <div className="mt-6">
                 <a
-                  href="https://wa.me/2341234567890"
+                  href="https://wa.me/2347030189611"
                   className="inline-flex items-center bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg transition-colors"
                 >
                   <FaWhatsapp className="mr-2" />
