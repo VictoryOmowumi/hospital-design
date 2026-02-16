@@ -106,8 +106,8 @@ export default function Footer() {
               </p>
               <p className="mb-4">
                 <span className="text-offwhite/80">Email:</span>{' '}
-                <a href="mailto:info@nakowahealth.com" className="text-primary hover:text-primary-light">
-                  info@nakowahealth.com
+                <a href="mailto:info@nakowahealthcentre.org" className="text-primary hover:text-primary-light">
+                  info@nakowahealthcentre.org
                 </a>
               </p>
               <div className="mt-6">

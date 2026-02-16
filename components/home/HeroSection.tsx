@@ -69,7 +69,7 @@ export default function HeroSection() {
               duration: 1
             }}
           >
-            Welcome to Nakowa Medical Center
+            Welcome to Nakowa Medical Centre
           </motion.h1>
           
           <motion.p 

@@ -12,7 +12,7 @@ const services = [
     icon: <Clock className="w-8 h-8" />,
     image: '/assets/nhc-1.png',
     features: [
-      'Trauma center',
+      'Trauma centre',
       'Cardiac emergency care',
       'Pediatric emergency',
       'Stroke treatment'

@@ -2,44 +2,37 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
 
 const testimonials = [
   {
     quote: "The care I received was exceptional, and the staff made me feel at ease throughout my treatment.",
-    author: "Chinonso",
-    role: "Patient",
-    image: "/assets/nhc-5.png"
+    author: "Aminu Mikailu",
+    role: "Patient"
   },
   {
     quote: "From the moment I walked in, I felt welcomed and well cared for. The doctors and nurses were incredibly attentive.",
-    author: "Amina",
-    role: "Patient",
-    image: "/assets/nhc-6.png"
+    author: "Amina Tajudeen",
+    role: "Patient"
   },
   {
     quote: "I was nervous about my procedure, but the team explained everything clearly and made sure I was comfortable.",
-    author: "Tunde",
-    role: "Patient",
-    image: "/assets/nhc-7.png"
+    author: "Tunde Adeyemi",
+    role: "Patient"
   },
   {
     quote: "Nakowa Health Care made my recovery smooth and stress-free. I am grateful for their professionalism.",
-    author: "Ngozi",
-    role: "Patient",
-    image: "/assets/nhc-8.png"
+    author: "Ngozi Okafor",
+    role: "Patient"
   },
   {
     quote: "The doctors listened to my concerns and provided excellent care. I highly recommend them.",
-    author: "Emeka",
-    role: "Patient",
-    image: "/assets/nhc-9.png"
+    author: "Emeka Chukwu",
+    role: "Patient"
   },
   {
     quote: "I appreciate the friendly environment and the way the nurses attended to me.",
-    author: "Bola",
-    role: "Patient",
-    image: "/assets/nhc-10.png"
+    author: "Bolajide Afolabi",
+    role: "Patient"
   }
 ];
 
@@ -96,7 +89,7 @@ export function TestimonialsSection() {
   // Animation variants
   const variants = {
     enter: (direction: number) => ({
-      x: direction > 0 ? '100%' : '-100%',
+      x: direction > 0 ? 100 : -100,
       opacity: 0
     }),
     center: {
@@ -104,7 +97,7 @@ export function TestimonialsSection() {
       opacity: 1
     },
     exit: (direction: number) => ({
-      x: direction < 0 ? '100%' : '-100%',
+      x: direction < 0 ? 100 : -100,
       opacity: 0
     })
   };
@@ -135,7 +128,7 @@ export function TestimonialsSection() {
         <div className="relative max-w-7xl mx-auto">
           {/* Carousel */}
           <div className="overflow-hidden relative h-[400px] md:h-[350px]">
-            <AnimatePresence custom={direction} initial={false}>
+            <AnimatePresence custom={direction} initial={false} mode="wait">
               <motion.div
                 key={currentIndex}
                 custom={direction}
@@ -143,11 +136,9 @@ export function TestimonialsSection() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ 
-                  type: 'spring', 
-                  stiffness: 300, 
-                  damping: 30,
-                  duration: 0.5 
+                transition={{
+                  x: { type: 'tween', ease: 'easeInOut', duration: 0.6 },
+                  opacity: { duration: 0.3 }
                 }}
                 className="absolute inset-0 flex"
               >
@@ -159,30 +150,20 @@ export function TestimonialsSection() {
                       className="w-full lg:w-1/3 px-4 h-full flex-shrink-0"
                     >
                       <motion.div
-                        className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 h-full flex flex-col"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
+                        className="relative bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg shadow-primary/5 border border-primary/10 h-full flex flex-col overflow-hidden"
                       >
-                        <div className="flex-1 flex flex-col items-center">
-                          <div className="w-20 h-20 mb-6 rounded-full overflow-hidden relative">
-                            <Image
-                              src={testimonial.image}
-                              alt={testimonial.author}
-                              fill
-                              className="object-cover object-top"
-                              sizes="(max-width: 768px) 100vw, 33vw"
-                            />
-                          </div>
-                          <blockquote className="text-lg text-gray-700 italic mb-8 text-center flex-1">
+                        <span className="pointer-events-none select-none absolute -top-0 left-0 text-7xl md:text-8xl text-primary/10 leading-none">
+                          &ldquo;
+                        </span>
+                        <div className="flex-1 flex flex-col items-center justify-center">
+                          <blockquote className="relative z-10 text-xl md:text-xl text-gray-800 italic mb-6 text-center flex-1 flex items-center leading-relaxed px-2 md:px-4">
                             &ldquo;{testimonial.quote}&rdquo;
                           </blockquote>
-                          <div className="text-center">
-                            <div className="text-primary font-medium">
+                          <div className="relative z-10 text-center mt-2 pt-4 border-t border-gray-100 w-full">
+                            <div className="text-primary font-semibold tracking-wide uppercase text-xs md:text-sm">
                               {testimonial.author}
                             </div>
-                            <div className="text-sm text-gray-500">
+                            <div className="text-sm text-gray-500 mt-1">
                               {testimonial.role}
                             </div>
                           </div>

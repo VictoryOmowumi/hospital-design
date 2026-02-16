@@ -41,8 +41,8 @@ export default function Header() {
     { title: 'Home', url: '/' },
     { title: 'About', url: '/about' },
     { title: 'Services', url: '/services' },
-    { title: 'Doctors', url: '/team' },
-    { title: 'Patients', url: '/patients' },
+    // { title: 'Doctors', url: '/team' },
+    // { title: 'Patients', url: '/patients' },
     { title: 'Contact', url: '/contact' },
   ];
 

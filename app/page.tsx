@@ -15,7 +15,7 @@ export default function Home() {
       <ServicesSection />
       <TestimonialsSection />
       <DoctorsPreview />
-      <NewsSection />
+      {/* <NewsSection /> */}
       <EmergencyCTA />
       {/* <ContactBar /> */}
     </main>
