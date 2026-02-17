@@ -200,8 +200,27 @@ export default function BookPage() {
           </p>
         </motion.div>
 
+        {/* Calendly Embed */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto mb-12 bg-white rounded-3xl shadow-xl p-2 md:p-4"
+          id="online-booking"
+        >
+          <div className="w-full h-[650px] md:h-screen rounded-2xl overflow-hidden bg-transparent">
+            <iframe
+              src="https://calendly.com/victorybalogun/30min?hide_gdpr_banner=1&hide_landing_page_details=1&hide_landing_page_time_zone=1&background_color=ffffff&text_color=000000&primary_color=16c64f"
+              className="w-full h-full bg-transparent"
+              style={{ border: 0 }}
+              allowFullScreen
+            />
+          </div>
+        </motion.div>
+
         {/* Progress Bar */}
-        <div className="max-w-3xl mx-auto mb-12">
+        {/* <div className="max-w-3xl mx-auto mb-12">
           <div className="flex items-center justify-between mb-4">
             {[1, 2, 3].map((step) => (
               <div key={step} className="flex items-center flex-1">
@@ -232,17 +251,16 @@ export default function BookPage() {
             <span>Appointment</span>
             <span>Confirmation</span>
           </div>
-        </div>
+        </div> */}
 
         {/* Form */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl p-8 md:p-12"
         >
           <form onSubmit={handleSubmit}>
             <AnimatePresence mode="wait">
-              {/* Step 1: Personal Information */}
               {currentStep === 1 && (
                 <motion.div
                   key="step1"
@@ -356,7 +374,6 @@ export default function BookPage() {
                 </motion.div>
               )}
 
-              {/* Step 2: Appointment Details */}
               {currentStep === 2 && (
                 <motion.div
                   key="step2"
@@ -459,7 +476,6 @@ export default function BookPage() {
                 </motion.div>
               )}
 
-              {/* Step 3: Review & Confirm */}
               {currentStep === 3 && (
                 <motion.div
                   key="step3"
@@ -513,7 +529,6 @@ export default function BookPage() {
               )}
             </AnimatePresence>
 
-            {/* Navigation Buttons */}
             <div className="flex justify-between mt-8 pt-6 border-t">
               {currentStep > 1 && (
                 <motion.button
@@ -549,7 +564,7 @@ export default function BookPage() {
               </motion.button>
             </div>
           </form>
-        </motion.div>
+        </motion.div> */}
 
         {/* Help Section */}
         <motion.div
@@ -560,8 +575,8 @@ export default function BookPage() {
         >
           <p className="text-onyx/70">
             Need help? <a href="/contact" className="text-primary hover:text-primary-dark font-semibold">Contact us</a> or call{' '}
-            <a href="tel:+2341234567890" className="text-primary hover:text-primary-dark font-semibold">
-              +234 123 456 7890
+            <a href="tel:+2347030189611" className="text-primary hover:text-primary-dark font-semibold">
+              234 703 018 9611
             </a>
           </p>
         </motion.div>
