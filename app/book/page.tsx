@@ -211,7 +211,7 @@ export default function BookPage() {
         >
           <div className="w-full h-[650px] md:h-screen rounded-2xl overflow-hidden bg-transparent">
             <iframe
-              src="https://calendly.com/victorybalogun/30min?hide_gdpr_banner=1&hide_landing_page_details=1&hide_landing_page_time_zone=1&background_color=ffffff&text_color=000000&primary_color=16c64f"
+              src="https://calendly.com/nakowahealthcentre/30min?hide_gdpr_banner=1&hide_landing_page_details=1&hide_landing_page_time_zone=1&background_color=ffffff&text_color=000000&primary_color=16c64f"
               className="w-full h-full bg-transparent"
               style={{ border: 0 }}
               allowFullScreen
