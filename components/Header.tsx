@@ -106,7 +106,7 @@ export default function Header() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: "easeInOut"
       }
     },
@@ -114,7 +114,7 @@ export default function Header() {
       y: -100,
       opacity: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: "easeInOut"
       }
     }
@@ -125,9 +125,9 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo with animation */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 1, x: 0 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ duration: 0 }}
           >
             <Link href="/" className="flex items-center">
               <Image
@@ -147,7 +147,7 @@ export default function Header() {
               <motion.div
                 key={item.title}
                 custom={i}
-                initial="hidden"
+                initial="visible"
                 animate="visible"
                 variants={navItemVariants}
                 whileHover={{ scale: 1.05 }}
@@ -172,9 +172,9 @@ export default function Header() {
 
           {/* Book Now Button - Desktop */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 1, scale: 1 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.8 }}
+            transition={{ duration: 0 }}
             className="hidden lg:block"
           >
             <Link
@@ -188,9 +188,9 @@ export default function Header() {
           {/* Mobile menu button */}
           <motion.div 
             className="lg:hidden flex items-center"
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
+            transition={{ duration: 0 }}
           >
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -222,9 +222,9 @@ export default function Header() {
                 {navItems.map((item, i) => (
                   <motion.div
                     key={item.title}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 1, x: 0 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 + i * 0.1 }}
+                    transition={{ duration: 0 }}
                   >
                     <Link
                       href={item.url}
@@ -236,9 +236,9 @@ export default function Header() {
                   </motion.div>
                 ))}
                 <motion.div
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 1, y: 0 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 }}
+                  transition={{ duration: 0 }}
                 >
                   <Link
                     href="/book"

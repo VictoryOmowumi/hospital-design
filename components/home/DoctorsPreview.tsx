@@ -20,9 +20,14 @@ const doctors = [
     image: "/assets/nhc-12.png",
   },
   {
-    name: "Pharm. Maryam Usman",
-    specialty: "PHARMACIST",
-    image: "/assets/nhc-15.png",
+    name: "Ayodeji Aliyu",
+    specialty: "GENERAL SECRETARY",
+    image: "/assets/nhc-20.png",
+  },
+  {
+    name: "Maryam Usman",
+    specialty: "ADMINISTRATIVE OFFICER",
+    image: "/assets/nhc-22.png",
   },
 ];
 
@@ -50,8 +55,8 @@ export  function DoctorsPreview() {
         </div>
 
         {/* Horizontal Scroll on Mobile, Grid on Desktop */}
-        <div className="overflow-x-auto md:overflow-x-visible -mx-4 px-4 md:mx-0 md:px-0 no-scrollbar">
-          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6 min-w-max md:min-w-0">
+        <div className="overflow-x-auto md:overflow-x-visible  px-4 md:px-0 no-scrollbar max-w-6xl w-full md:mx-auto">
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6 min-w-max md:max-w-[300px]">
             {doctors.map((doctor, index) => (
               <motion.div
                 key={index}

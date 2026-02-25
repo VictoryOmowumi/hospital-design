@@ -79,7 +79,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
             >
               <Image
-                src="/assets/nhc-9.png"
+                src="/assets/nhc-10.png"
                 alt="About Nakowa Health Care"
                 fill
                 className="object-top object-cover"
@@ -117,7 +117,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
             >
               <Image
-                src="/assets/nhc-10.png"
+                src="/assets/nhc-12.png"
                 alt="About Nakowa Health Care"
                 fill
                 className="object-top object-cover"
