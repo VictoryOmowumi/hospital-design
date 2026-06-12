@@ -3,6 +3,8 @@ import type { Metadata } from 'next'
 import { Cairo, Poppins} from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import MaintenanceMode from '@/components/MaintenanceMode'
+import { maintenanceMode } from '@/maintenance.config'
 import Head from 'next/head'
 
 const cairo = Cairo({ 
@@ -17,9 +19,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Nakowa Health Care & Medical Services',
+  title: maintenanceMode ? 'Maintenance | Nakowa Health Care' : 'Nakowa Health Care & Medical Services',
   description: 'Leading healthcare provider offering comprehensive medical services with state-of-the-art facilities and expert care.',
   keywords: 'hospital, healthcare, medical services, doctors, emergency care, surgery, maternity',
+  robots: maintenanceMode ? { index: false, follow: false } : undefined,
 }
 
 export default function RootLayout({
@@ -47,13 +50,17 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`${cairo.className} ${poppins.className}  bg-gradient-to-br from-[#edeef1] to-[#f6f5f1] text-onyx`}>
-        <div className="min-h-screen flex flex-col">
-          <Header />
-          <main className="flex-grow">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        {maintenanceMode ? (
+          <MaintenanceMode />
+        ) : (
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <Footer />
+          </div>
+        )}
       </body>
     </html>
   )
